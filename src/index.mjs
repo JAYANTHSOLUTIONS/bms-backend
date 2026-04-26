@@ -20,7 +20,7 @@ app.get("/",(req,res)=>{
 
 app.get("/api/data",async (req,res)=>{
     try{
-            const call = await axios.get("http://localhost:3000/movies")
+            const call = await axios.get("https://bms-api-xxh8.onrender.com/movies")
             // console.log(call.data);
             
             res.send(call.data)
@@ -38,7 +38,7 @@ app.patch("/api/edit/:id", async (req, res) => {
     
 
     try {
-        const response = await axios.patch(`http://localhost:3000/movies/${id}`, body);
+        const response = await axios.patch(`https://bms-api-xxh8.onrender.com/movies/${id}`, body);
         console.log(`Movie ${id} successfully updated`);
         
         // Returning the updated data is helpful for front-end frameworks
@@ -60,7 +60,7 @@ app.put("/api/edit/:id", async (req, res) => {
     
 
     try {
-        const response = await axios.put(`http://localhost:3000/movies/${id}`, body);
+        const response = await axios.put(`https://bms-api-xxh8.onrender.com/movies/${id}`, body);
         console.log(`Movie ${id} successfully updated`);
         
         // Returning the updated data is helpful for front-end frameworks
